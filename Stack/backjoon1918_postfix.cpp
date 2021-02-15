@@ -18,7 +18,6 @@ int main(){
                         break;
                     answer.push_back(oper.top());
                     oper.pop();
-
                 }
             oper.push(infix[i]);
         }else if (infix[i]=='-'){
@@ -59,10 +58,12 @@ int main(){
             answer.push_back(infix[i]);
         }
     }
+    
     while(!oper.empty()){
         answer.push_back(oper.top());
         oper.pop();
     }
+    
     for(int i=0,j=answer.size();i<j;i++){
         cout<<answer[i];
     }
