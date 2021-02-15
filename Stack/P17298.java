@@ -19,7 +19,7 @@ public class P17298 {
 		for (int i = 0; i < n; i++) {
 			
 			/*스택이 비어있지 않고 스택 픽 값이 다음 값보다 작을때
-			 * 그 값을 다음값으로 변경하고 스택에 인덱스갑 푸쉬
+			 * 그 값을 다음값으로 변경하고 스택에 인덱스값 PUSH
 			 */
 			while(!stk.isEmpty()&&ar[stk.peek()]<ar[i]) {
 				ar[stk.pop()]=ar[i];
