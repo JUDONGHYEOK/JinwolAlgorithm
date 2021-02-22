@@ -12,9 +12,18 @@ int findlist(deque<int>dq,int number){
     return -1;
 }
 
+void print(deque<int>dq){
+    for(int i=0,j=dq.size();i<j;i++){
+        cout<<dq.front()<<" ";
+        dq.pop_front();
+    }
+    cout<<endl;
+}
+
 int main(){
     int number,count,targetNumber,answer=0;
     deque<int> dq,left,right;
+
 
     cin>>number;
     for(int i=0;i<number;i++){
