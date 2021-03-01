@@ -5,17 +5,20 @@ for i in range(N):
     turnel_in[str(input())] = row_in
     row_in += 1
 turnel_out = {}
-row_out = 1
+
 for i in range(N):
-    turnel_out[str(input())] = row_out
-    row_out += 1
+    M = str(input())
+    if M in turnel_in.keys():
+        turnel_out[M] = turnel_in[M]
 
-res = 0
-for i in turnel_in.keys():
-    if turnel_in[i] > turnel_out[i]:
-        res += 1
 
-print(turnel_in)
-print(turnel_out)
 
-print(res)
+go = {}
+for i in range(N):
+    for j in range(0,i):
+        if list(turnel_out.values())[i] < list(turnel_out.values())[j]:
+            go[list(turnel_out.keys())[j]] = 1
+
+
+
+print(len(go))
